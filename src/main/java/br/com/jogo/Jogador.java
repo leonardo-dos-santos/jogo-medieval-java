@@ -14,13 +14,16 @@ public class Jogador implements Serializable {
 
     public Jogador(String nome) {
         this.nome = nome;
-        this.saude = 100.0;
-        this.armaAtual = new Arma("Espada Curta Enferrujada", 3);
-        // Inicialização padrão para evitar NullPointerException ao calcular defesa
-        this.capacete = new Capacete("Nenhum", 0, 0);
-        this.camisa = new Camisa("Trapos de Pano", 100, 1);
-        this.calca = new Calca("Trapos de Pano", 100, 1);
-        this.sapato = new Sapato("Nenhum", 0, 0);
+        this.saude = 150.0; // Saúde aumentada de 100 para 150
+
+        // Arma muito mais imponente e poderosa
+        this.armaAtual = new Arma("Excalibur do Alvorecer", 25);
+
+        // Equipamentos iniciais melhorados (Stats de Defesa e Durabilidade)
+        this.capacete = new Capacete("Elmo de Aço Galvânico", 100, 15);
+        this.camisa = new Camisa("Cota de Malha Real", 100, 20);
+        this.calca = new Calca("Grevas de Couro Batido", 100, 10);
+        this.sapato = new Sapato("Botas de Expedição", 100, 8);
     }
 
     public void receberDano(double ataqueInimigo) {
